@@ -1,2 +1,2 @@
 # colcho.net
-Exemplo Alula
+Exemplo Aula Curso Ruby on Rails
