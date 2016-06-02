@@ -3,11 +3,25 @@ pt-BR:
   rooms:
     new:
       title: Novo Quarto
+    edit:
+      title: Editar Quarto
+    show:
+      edit: Editar Quarto
   users:
     new:
       title: Novo Cadastro
+    edit:
+      title: Editar Cadastro
+    show:
+      title: "Perfil: %{user_name}"
+      edit: "Editar perfil"
+      location: "Localização: %{location}"
+      bio: "Bio: %{bio}"
   links:
     back: Voltar
+  layout:
+    rooms: Quartos
+    signup: Cadastro
   activerecord:
     models:
       user: Usuário
