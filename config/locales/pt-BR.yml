@@ -1,5 +1,15 @@
 ---
 pt-BR:
+  signup:
+    confirm_email:
+      subject: 'Colcho.net - Confirme seu email'
+      title: 'Seja bem vindo ao Colcho.net!'
+      body: |
+          Seja bem vindo ao Colcho.net, %{full_name}.
+          O Colcho.net é o lugar ideal para você alugar aquele
+          quarto que tá sobrando e ainda conhecer gente de todo
+          mundo!
+      confirm_link_html: 'Para você começar a usar o site, acesse o link: %{link}'
   rooms:
     new:
       title: Novo Quarto

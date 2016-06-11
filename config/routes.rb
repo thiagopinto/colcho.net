@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :rooms
-  resources :users
+  scope "(:locale)", locale: /en|pt\-BR/ do
+    resources :rooms
+    resources :users
+  end
+  get '/:locale' => 'home#index', locale: /en|pt\-BR/
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

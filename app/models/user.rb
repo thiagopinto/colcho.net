@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
     errors.add(:email, :invalid) unless email.match(EMAIL_REGEXP)
   end
 
+  before_create do |user|
+    user.confirmation_token = SecureRandom.urlsafe_base64
+  end
+
 end
