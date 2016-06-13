@@ -16,4 +16,16 @@ class User < ActiveRecord::Base
     user.confirmation_token = SecureRandom.urlsafe_base64
   end
 
+  def confirm!
+    return if confirmed?
+
+    self.confirmed_at = Time.current
+    self.confirmation_token = ''
+    save!
+  end
+
+  def confirmed?
+    confirmed_at.present?
+  end
+
 end
