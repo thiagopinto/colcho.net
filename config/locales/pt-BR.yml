@@ -1,5 +1,8 @@
 ---
 pt-BR:
+  flash:
+    notice:
+      signed_in: 'Você está dentro!'
 
   user_sessions:
     new:
