@@ -1,10 +1,12 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: [:show, :edit, :update, :destroy]
+  before_action :set_room, only: [:show]
+  before_action :set_users_room, only: [:edit, :update, :destroy]
+  before_action :require_authentication, only: [:new, :create, :update, :destroy]
 
   # GET /rooms
   # GET /rooms.json
   def index
-    @rooms = Room.all
+    @rooms = Room.most_recent
   end
 
   # GET /rooms/1
@@ -14,7 +16,7 @@ class RoomsController < ApplicationController
 
   # GET /rooms/new
   def new
-    @room = Room.new
+    @room = current_user.rooms.build
   end
 
   # GET /rooms/1/edit
@@ -24,7 +26,7 @@ class RoomsController < ApplicationController
   # POST /rooms
   # POST /rooms.json
   def create
-    @room = Room.new(room_params)
+    @room = current_user.rooms.build(room_params)
 
     respond_to do |format|
       if @room.save
@@ -65,6 +67,10 @@ class RoomsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_room
       @room = Room.find(params[:id])
+    end
+
+    def set_users_room
+      @room = current_user.rooms.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
