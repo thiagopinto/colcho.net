@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Rooms</h1>
+<h1><%= t('.title') %></h1>
+
+<% @rooma.each do |room| %>
+   <%= render @room %>
+<% end %>
 
 <table>
   <thead>
