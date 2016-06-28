@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :rooms
+  has_many :rooms, dependent: :destroy
+  has_many :reviews, dependent: :destroy
 
   EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 

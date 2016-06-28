@@ -1,4 +1,5 @@
 class Room < ActiveRecord::Base
+  has_many: reviews, dependent: :destroy
   belongs_to :user
 
   def self.most_recent
