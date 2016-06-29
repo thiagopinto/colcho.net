@@ -40,6 +40,8 @@ pt-BR:
       title: Editar Quarto
     show:
       edit: Editar Quarto
+    review:
+      login_to_review: Faça o login para avaliar os Quartos
   users:
     new:
       title: Novo Cadastro
@@ -60,7 +62,6 @@ pt-BR:
     signout: Logout
     my_profile: Meu Perfil
 
-
   activemodel:
     attributes:
       user_session:
@@ -71,8 +72,9 @@ pt-BR:
         invalid_login: 'Usuário ou senha inválidos'
   activerecord:
     models:
+      review: Avaliação
       user: Usuário
-      room: Quartos
+      room: Quarto
     attributes:
       user:
         bio: Biografia
