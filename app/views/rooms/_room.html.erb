@@ -4,9 +4,9 @@
   <%= render partial: 'review', object: @user_review %>
 
     <span class="created">
-      <%= t('.owner_html')
+      <%= t('.owner_html',
       owner: room.user.full_name,
-      when: l(room.created_at, format: :short)
+    when: l(room.created_at, format: :short))
       %>
     </span>
     <p>
@@ -25,7 +25,7 @@
                 method: :delete,
                 data: { confirm: t('dialogs.destroy') } %>
         </li>
-        <li></li>
+
       </ul>
     <% end %>
 </article>
