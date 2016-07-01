@@ -6,7 +6,9 @@ class RoomsController < ApplicationController
   # GET /rooms
   # GET /rooms.json
   def index
-    @rooms = Room.most_recent
+    @rooms = Room.most_recent.map do |room|
+      RoomPresenter.new(room, self, false)
+    end
   end
 
   # GET /rooms/1
@@ -69,7 +71,8 @@ class RoomsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_room
-      @room = Room.find(params[:id])
+      room_model = Room.friendly.find(params[:id])
+      @room = RoomPresenter.new(room_model, self)
     end
 
     def set_users_room

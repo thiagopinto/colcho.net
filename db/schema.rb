@@ -30,8 +30,7 @@ ActiveRecord::Schema.define(version: 20160628001515) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "user_id"
-    t.string   "reviews_count"
-    t.string   "integer"
+    t.integer  "reviews_count"
   end
 
   add_index "rooms", ["user_id"], name: "index_rooms_on_user_id"
