@@ -6,10 +6,6 @@
   <%= render partial: 'review', locals: {room: room} %>
 
   <div class="room-description">
-    <%= link_to(
-          image_tag(room.thumb_url),
-          room.picture_url
-        ) if room.has_picture? %>
 
     <p><%= highlight(room.description || '', @search_query) %></p>
   </div>

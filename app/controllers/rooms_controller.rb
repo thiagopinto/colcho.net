@@ -71,7 +71,7 @@ class RoomsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_room
-      room_model = Room.friendly.find(params[:id])
+      room_model = Room.find(params[:id])
       @room = RoomPresenter.new(room_model, self)
     end
 
