@@ -1,13 +1,13 @@
 <article class="room">
   <h2>
-    <%= link_to highlight(room.title, @search_query), room.route %>
+    <%= link_to room.title, room.route %>
   </h2>
 
   <%= render partial: 'review', locals: {room: room} %>
 
   <div class="room-description">
 
-    <p><%= highlight(room.description || '', @search_query) %></p>
+    <p><%= room.description %></p>
   </div>
 
   <% if belongs_to_user(room) %>
