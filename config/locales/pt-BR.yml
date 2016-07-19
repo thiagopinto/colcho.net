@@ -30,6 +30,9 @@ pt-BR:
   rooms:
     index:
       title: 'Quartos disponíveis'
+      search_results: 'Resultados da busca'
+    search:
+      search_for: 'Buscar por...'
     room:
       owner_html: '&mdash; %{owner} (%{when})'
       edit: 'Editar'
@@ -41,6 +44,11 @@ pt-BR:
     show:
       edit: Editar Quarto
     review:
+      stats:
+        zero: 'Não há avaliações'
+        one: '(1 avaliação)'
+        other: '(%{count} avaliações)'
+    review_form:
       login_to_review: Faça o login para avaliar os Quartos
   users:
     new:

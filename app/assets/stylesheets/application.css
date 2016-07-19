@@ -12,6 +12,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require font-awesome
  */
  html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,/* 1 */
  figcaption,figure,footer,header,main,/* 2 */
