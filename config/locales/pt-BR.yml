@@ -95,6 +95,7 @@ pt-BR:
         description: Descrição
         location: Endereço
         title: Título
+        picture: Foto
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

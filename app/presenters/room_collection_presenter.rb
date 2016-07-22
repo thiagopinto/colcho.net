@@ -1,5 +1,6 @@
 class RoomCollectionPresenter
-  delegate :current_page, :num_pages, :limit_value, :total_pages, to: :@rooms
+  delegate :current_page, :num_pages, :limit_value, :total_pages,
+  to: :@rooms
 
   def initialize(rooms, context)
     @rooms = rooms

@@ -4,6 +4,7 @@ class Room < ActiveRecord::Base
   has_many :reviews, dependent: :destroy
   validates_presence_of :title
   validates_presence_of :slug
+  mount_uploader :picture, PictureUploader
   friendly_id :title, use: [:slugged, :history]
 
   def self.most_recent
@@ -16,7 +17,7 @@ class Room < ActiveRecord::Base
 
   def self.search(query)
     if(query.present?)
-      where(['location LIKE :query OR title LIKE :query OR description LIKE :query', query: "%#{query}%"])
+      where(['location ILIKE :query OR title ILIKE :query OR description ILIKE :query', query: "%#{query}%"])
     else
       all
     end
